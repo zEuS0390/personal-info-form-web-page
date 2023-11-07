@@ -1,0 +1,134 @@
+<!-- 
+
+  Disclaimer: This web page is a personal project and is not designed to 
+  collect or store any personal information. Any form inputs provided on 
+  this website are for demonstration purposes only and do not result in 
+  the collection, storage, or processing of any data. Your privacy and 
+  security are not at risk when using this web page. It is solely 
+  intended for educational or experimental purposes.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal Information Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="submit-form" action="POST">
+        <h3 class="submit-form-title">Personal Information</h3>
+        <p class="submit-form-desc">
+          Providing these details allows us to better understand and connect
+          with you. Your information is kept confidential and used solely for
+          the purpose of enhancing your user experience.
+        </p>
+
+        <!-- First Name Input -->
+        <label class="basic-info-label required" for="fname">First Name</label>
+        <input
+          class="basic-info-input"
+          name="fname"
+          id="fname"
+          type="text"
+          placeholder="Juan"
+          required
+        />
+
+        <label class="basic-info-label" for="mname">Middle Name</label>
+        <input
+          class="basic-info-input"
+          name="mname"
+          id="mname"
+          type="text"
+          placeholder="Aguinaldo"
+        />
+
+        <!-- Last Name Input -->
+        <label class="basic-info-label required" for="lname">Last Name</label>
+        <input
+          class="basic-info-input"
+          name="lname"
+          id="lname"
+          type="text"
+          placeholder="Dela Cruz"
+          required
+        />
+
+        <!-- Age Input -->
+        <label
+          class="basic-info-label required"
+          for="basic-info-label"
+          for="age"
+          >Age</label
+        >
+        <input
+          class="basic-info-input"
+          name="age"
+          id="age"
+          type="number"
+          min="0"
+          max="100"
+          placeholder="23"
+          required
+        />
+
+        <!-- Gender Input -->
+        <label class="basic-info-label required" for="gender">Gender</label>
+        <select class="basic-info-input" name="gender" id="gender" required>
+          <option disabled selected value>---</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Description -->
+        <label class="basic-info-label required" for="desc">Description</label>
+        <textarea
+          class="basic-info-input"
+          name="desc"
+          id="desc"
+          cols="30"
+          rows="10"
+          placeholder="Briefly tell your background, skills and experiences"
+          required
+        ></textarea>
+        <div class="desc-char-count">
+          <p class="desc-char-count-label js-text-count"></p>
+        </div>
+
+        <span class="submit-form-terms-and-privacy">
+          <input
+            name="terms-and-privacy"
+            id="terms-and-privacy"
+            type="checkbox"
+            required
+          />
+          <label for="terms-and-privacy"
+            >By checking this box, you acknowledge that you have read and agree
+            to our
+            <a href="about:blank" target="_blank">Terms of Service</a> and
+            <a href="about:blank" target="_blank">Privacy Policy</a>. These
+            documents outline our commitment to safeguarding your personal
+            information and governing the use of our website. We take your
+            privacy and security seriously, and your consent is important to
+            us.</label
+          >
+        </span>
+
+        <span class="submit-form-input">
+          <input class="submit-form-clear js-clear-inputs" type="reset" />
+          <input class="submit-form-button" type="submit" />
+        </span>
+      </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/events.js" type="module"></script>
+    <script src="js/functions.js" type="module"></script>
+    <script src="js/variables.js" type="module"></script>
+  </body>
+</html>
